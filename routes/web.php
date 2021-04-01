@@ -18,12 +18,6 @@ Route::post('regauth',[UserController::class,'store'])->name('regauth');
 
 Route::middleware(['user_auth'])->group(function() {
     Route::get('user/dashboard',[UserController::class,'dashboard']);
-    // Route::get('user/logout', function () {
-    //     session()->forget('USER_ID');
-    //     session()->flash('error','Logout succesfully.');
-    //     return redirect('login');
-    
-    //     });
     Route::get('user/logout',[UserController::class,'logout']);
 });
 
