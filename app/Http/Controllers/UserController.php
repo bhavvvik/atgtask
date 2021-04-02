@@ -34,7 +34,7 @@ class UserController extends Controller
         $password=$request->post('password');
         $result=User::where(['email'=>$email,'password'=>$password])->first();
         if(isset($result->id)){
-            dd("ff");
+            
             $request->session()->put('user',$result);
             
             return redirect('user/dashboard');
