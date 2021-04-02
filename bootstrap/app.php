@@ -40,7 +40,9 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+ ]);
 /*
 |--------------------------------------------------------------------------
 | Return The Application
