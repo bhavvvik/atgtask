@@ -2,6 +2,7 @@
 @section('logincontainer')
 <h2>Register</h2>
 <form action="{{route('regauth')}}" method="post">
+                            @method('put')
                             @csrf
                             <div class="box">
                             <label>Name</label>
