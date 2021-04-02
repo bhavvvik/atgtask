@@ -3,9 +3,8 @@
 <h2>Login</h2>
 
 <form action="{{route('user.auth')}}" method="post">
-                            @csrf
-                                
-                                    <label>Email Address</label>
+                            <!-- @csrf -->
+                             <label>Email Address</label>
                                     <input type="email" name="email" placeholder="Email">
                                 </br>
                                     <label>Password</label>

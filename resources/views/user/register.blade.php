@@ -2,7 +2,7 @@
 @section('logincontainer')
 <h2>Register</h2>
 <form action="{{route('regauth')}}" method="post">
-                            @csrf
+                            <!-- @csrf -->
                             <label>Name</label>
                                     <input type="text" name="name" placeholder="name">
                                     @error('name')
