@@ -29,20 +29,20 @@ class UserController extends Controller
     
 
     public function auth(Request $request)
-    {   dd($request);
-        // $email=$request->post('email');
-        // $password=$request->post('password');
-        // $result=User::where(['email'=>$email,'password'=>$password])->first();
-        // if(isset($result->id)){
+    {   
+        $email=$request->post('email');
+        $password=$request->post('password');
+        $result=User::where(['email'=>$email,'password'=>$password])->first();
+        if(isset($result->id)){
+            dd("ff");
+            $request->session()->put('user',$result);
             
-        //     $request->session()->put('user',$result);
-            
-        //     return redirect('user/dashboard');
+            return redirect('user/dashboard');
 
-        // }else{
-        //     $request->session()->flash('error',"please Enter Correct Email And Password");
-        //     return redirect('login');
-        // }
+        }else{
+            $request->session()->flash('error',"please Enter Correct Email And Password");
+            return redirect('login');
+        }
     }
     public function dashboard()
     { 
