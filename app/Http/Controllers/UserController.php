@@ -44,6 +44,7 @@ class UserController extends Controller
             return redirect('login');
         }
     }
+    
     public function dashboard()
     { 
     //   return view('user/dashboard');

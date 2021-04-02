@@ -14,6 +14,7 @@ Route::get('login',[UserController::class,'index']);
 Route::get('register',[UserController::class,'index1']);
 
 Route::post('User/auth',[UserController::class,'auth'])->name('user.auth'); 
+
 Route::post('regauth',[UserController::class,'store'])->name('regauth'); 
 
 Route::middleware(['user_auth'])->group(function() {

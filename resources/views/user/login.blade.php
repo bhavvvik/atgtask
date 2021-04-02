@@ -3,7 +3,7 @@
 <h2>Login</h2>
 
 <form action="{{route('user.auth')}}" method="post">
-                            <!-- @csrf -->
+                            @csrf
                              <label>Email Address</label>
                                     <input type="email" name="email" placeholder="Email">
                                 </br>
