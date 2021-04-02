@@ -20,6 +20,6 @@
 	                        </div>					
 </form>
 <h3>For Direct Run use</h3>
-<p>email:abc@abc.com </br>
-password:abc</p>
+<p>email:a@b.c </br>
+password:atg123456</p>
 @endsection
