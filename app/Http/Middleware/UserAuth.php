@@ -17,7 +17,7 @@ class UserAuth
     public function handle(Request $request, Closure $next)
     {
         if($request->session()->has('user')){
-         dd($request->session()->get('user'));
+        //  dd($request->session()->get('user'));
         
         
         return $next($request);

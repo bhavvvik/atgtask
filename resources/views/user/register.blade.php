@@ -3,6 +3,7 @@
 <h2>Register</h2>
 <form action="{{route('regauth')}}" method="post">
                             @csrf
+                            <div class="box">
                             <label>Name</label>
                                     <input type="text" name="name" placeholder="name">
                                     @error('name')
@@ -26,7 +27,7 @@
                                 
                               
                                     {{session('error')}}
-						
+						</div>
 </form>
 <!-- @foreach($errors->all as $e)
 <li>{{$e}}</li>

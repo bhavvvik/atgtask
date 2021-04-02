@@ -4,6 +4,7 @@
 
 <form action="{{route('user.auth')}}" method="post">
                             @csrf
+                            <div class="box">
                              <label>Email Address</label>
                                     <input type="email" name="email" placeholder="Email">
                                 </br>
@@ -15,7 +16,7 @@
                                 
                               
                                     {{session('error')}}
-						
+	                        </div>					
 </form>
 <h3>For Direct Run use</h3>
 <p>email:abc@abc.com </br>
