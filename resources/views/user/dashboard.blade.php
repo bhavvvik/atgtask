@@ -13,6 +13,8 @@ body{
 <h2>
 {{$secarr->name}}</h2>
 
+<a href="showtask">Show Task</a>
+
 
 <a href="logout">logout</a>
 </body>
