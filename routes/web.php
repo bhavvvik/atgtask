@@ -2,6 +2,7 @@
 
 // use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TaskController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ Route::post('regauth',[UserController::class,'store'])->name('regauth');
 
 Route::middleware(['user_auth'])->group(function() {
     Route::get('user/dashboard',[UserController::class,'dashboard']);
+    Route::get('user/showtask',[TaskController::class,'index']);
+    // Route::get('user/taskshow',[TaskController::class,'index']);
+
     Route::get('user/logout',[UserController::class,'logout']);
 });
 
